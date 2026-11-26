@@ -14,7 +14,7 @@
 
 **Fixed**
 
-- iOS in-app agent: the cells of a collection view (a UIKit collection view, a SwiftUI `List`) were in the order the collection view reuses them, not in the order they are on screen: after scrolling back, a lower row came before a higher one, and `index` picked another element than the one on screen. They are now in reading order (rows from the top, in a row from the leading edge), as for VoiceOver and XCUITest
+- iOS in-app agent: the cells of a collection view (a UIKit collection view, a SwiftUI `List`) were in the order the collection view reuses them, not in the order they are on screen: after scrolling back, a lower row came before a higher one, and `index` picked another element than the one on screen. They are now in reading order (rows from the top, in a row from the leading edge, in a column of a row from the top), also in a section that scrolls sideways, as for VoiceOver and XCUITest. An order an app sets itself (`accessibilityElements` of the collection view) is read the same way
 
 ## [1.5.0]
 
